@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family-default: "Lexend Deca", sans-serif;
+  --font-family-secundary: "Big Shoulders Display", sans-serif;
+  --fw-400: 400;
+  --fw-700: 700;
+  --clr-primary-1: hsl(31, 77%, 52%);
+  --clr-primary-2: hsl(184, 100%, 22%);
+  --clr-primary-3: hsl(179, 100%, 13%);
+  --clr-neutral-1: hsla(0, 0%, 100%, 0.75);
+  --clr-neutral-2: hsl(0, 0%, 95%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-family-default);
+  font-size: 0.938rem; /* 15px */
+  font-weight: var(--fw-400);
+  color: var(--clr-neutral-1);
+  min-height: 100vh;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  margin: 0 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.section {
+  padding: 3rem;
+  background-color: var(--section-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.section-sedans {
+  --section-bg-color: hsl(31, 77%, 52%);
+  --section-color: hsl(31, 77%, 52%);
+}
+
+.section-suvs {
+  --section-bg-color: hsl(184, 100%, 22%);
+  --section-color: hsl(184, 100%, 22%);
+}
+
+.section-luxury {
+  --section-bg-color: hsl(179, 100%, 13%);
+  --section-color: hsl(179, 100%, 13%);
+}
+
+.section-title {
+  font-family: var(--font-family-secundary);
+  font-size: 2.5rem;
+  font-weight: var(--fw-700);
+  color: var(--clr-neutral-2);
+}
+
+.button {
+  padding: 0.5rem 2rem;
+  border: 0;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: var(--section-color);
+  border: 0.2rem solid var(--clr-neutral-2);
+}
+
+@media screen and (min-width: 769px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 57rem;
+  }
+
+  .button {
+    margin-top: 5rem;
+  }
+
+  .section-sedans .button:hover,
+  .section-sedans .button:focus {
+    background-color: var(--section-bg-color);
+    color: var(--clr-neutral-2);
+  }
+
+  .section-suvs .button:hover,
+  .section-suvs .button:focus {
+    background-color: var(--section-bg-color);
+    color: var(--clr-neutral-2);
+  }
+
+  .section-luxury .button:hover,
+  .section-luxury .button:focus {
+    background-color: var(--section-bg-color);
+    color: var(--clr-neutral-2);
+  }
+}
